@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Listeners\WorkFlowEventListener;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use App\Interfaces\WorkFlowEvent;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,9 +15,10 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
-        ],
+        //'App\Events\WorkFlowEvent' => [
+        //    'App\Listeners\WorkFlowEventListener',
+        //],
+        WorkFlowEvent::class => [WorkFlowEventListener::class]
     ];
 
     /**

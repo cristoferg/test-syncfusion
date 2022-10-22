@@ -77,11 +77,12 @@
                 </div>
             </div>
         </nav>
-        <example-grid></example-grid>
+        <!--<example-grid></example-grid>-->
         @yield('content')
     </div>
 
     <!-- Scripts -->
+    <script src="http://decipher.test/embed/script.js"></script>
     <script src="/js/app.js"></script>
 </body>
 </html>

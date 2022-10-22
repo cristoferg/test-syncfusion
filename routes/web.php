@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/workflow', 'TestWorkFlowController@index');
+
+
+Route::get('/embed', function () {
+    return view('embed');
+});
